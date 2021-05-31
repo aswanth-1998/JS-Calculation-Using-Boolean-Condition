@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+function boolean(){
+    var a=document.getElementById("name").value;
+    var b=document.getElementById("phoneNumber").value;
+    var c= document.getElementById("address").value;         
+    var t=Number(document.getElementById("type").value);
+    var x = document.getElementById("extra").value;
+var y = " ";
+if(x==="yes")
+{
+    y = true;
+}
+else
+{
+    y = false;
+}
+if (Boolean(y)) {
+ 
+ document.getElementById("result").innerHTML
+ ="Name: "+a+"</br>"+"Phone Number: "+b+"</br>"+"Address : "+c+"</br>"+"Your estimated wedding cost is "+(t+20000);
+
+}
+else {
+
+document.getElementById("result").innerHTML
+="Name :"+a+"</br>"+"Phone Number :"+b+"</br>"+"Address : "+c+"</br>"+"Your estimated wedding cost is "+(t);
+}	
+
+}
+		</script>
+	</head>
+<body>
+<center>
+<h1>Wedding Decoration Cost Calculation</h1>
+Name <input id = "name"> <br>
+Phone Number <input id = "phoneNumber" type = "number"><br>
+Address <input id = "address"><br>
+Wedding Type <select id = "type">
+<option value ="50000">Simple</option>
+<option value ="150000">Grand</option>
+</select><br>
+Do you want extra flower decoration <select id = "extra">
+<option value = "yes">Yes</option>
+<option value = "no">No</option>
+</select><br>
+<button id = "calculate" onclick="boolean()">Calculate the charge</button>
+<div id = "result">
+    
+</div>
+</center>
+</body>
+</html>
